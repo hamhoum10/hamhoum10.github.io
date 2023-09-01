@@ -339,12 +339,9 @@
     <script src="public/assets/js/main.js"></script>
     <script>
         window.addEventListener('scroll', function() {
-            var navbar = document.getElementById('navbar');
-            if (window.pageYOffset > 0) {
-                navbar.style.top = '0';
-            } else {
-                navbar.style.top = '';
-            }
+            var  header = document.querySelector('header');
+
+            header.classList.toggle("sticky",window.scrollY>0);
         });
     </script>
 </main>
