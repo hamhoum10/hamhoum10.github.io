@@ -1,0 +1,146 @@
+[33mcommit f86c3311917a9ba6dec18a03dc18b792a0943f7c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: ab3dd15 5929565
+Author: hamhoum <54715039+hamhoum10@users.noreply.github.com>
+Date:   Thu Jan 9 15:14:53 2025 +0100
+
+    Merge pull request #1 from hamhoum10/imgbot
+    
+    [ImgBot] Optimize images
+
+[33mcommit ab3dd155d215fa35591ba573a59b16f519d0ec63[m
+Merge: 7c6cc1d 66a164e
+Author: hamhoum <54715039+hamhoum10@users.noreply.github.com>
+Date:   Thu Jan 9 15:14:38 2025 +0100
+
+    Merge pull request #3 from hamhoum10/yasser
+    
+    .
+
+[33mcommit 66a164ec185fc402b05700fb59e7ea3d02de8e98[m[33m ([m[1;31morigin/yasser[m[33m)[m
+Author: hamhoum10 <omriyasser12@gmail.com>
+Date:   Thu Jan 9 15:13:41 2025 +0100
+
+    .
+
+[33mcommit 7c6cc1d0c0a508da42a53e1c1d39d5028a59f235[m
+Merge: a7d3515 3364e6c
+Author: hamhoum <54715039+hamhoum10@users.noreply.github.com>
+Date:   Thu Jan 9 14:35:22 2025 +0100
+
+    Merge pull request #2 from hamhoum10/yasser
+    
+    yasser
+
+[33mcommit 3364e6cc146b1f651643694aa929dcfd47842671[m
+Merge: 69a80e5 a7d3515
+Author: hamhoum <54715039+hamhoum10@users.noreply.github.com>
+Date:   Thu Jan 9 14:35:07 2025 +0100
+
+    Merge branch 'master' into yasser
+
+[33mcommit a7d3515256db79c66c7a63786cfb1b1ba0649e33[m
+Author: YOSROMRI <yosr.omri@esprit.tn>
+Date:   Wed Jan 8 23:29:12 2025 +0100
+
+    aboutpage
+
+[33mcommit 5929565aa134385f111bfd12de68d0653e9720d6[m
+Author: ImgBotApp <ImgBotHelp@gmail.com>
+Date:   Wed Jan 8 21:11:42 2025 +0000
+
+    [ImgBot] Optimize images
+    
+    *Total -- 8,870.28kb -> 7,456.85kb (15.93%)
+    
+    /lib/owlcarousel/assets/ajax-loader.gif -- 3.13kb -> 1.77kb (43.39%)
+    /img/AboutUs0.0.png -- 2,871.36kb -> 1,713.27kb (40.33%)
+    /lib/owlcarousel/assets/owl.video.play.png -- 4.86kb -> 3.63kb (25.3%)
+    /img/fafitou.png -- 158.28kb -> 122.21kb (22.79%)
+    /IMAGE.yosr.modif/GAVAN logo.png -- 30.50kb -> 26.33kb (13.67%)
+    /img/GAVAN logo.png -- 30.50kb -> 26.33kb (13.67%)
+    /img/HomePage0.1.png -- 540.94kb -> 469.95kb (13.12%)
+    /IMAGE.yosr.modif/HomePage0.1.png -- 540.94kb -> 469.95kb (13.12%)
+    /lib/lightbox/images/prev.png -- 1.33kb -> 1.27kb (4.26%)
+    /IMAGE.yosr.modif/HomePage0.4.jpeg -- 182.45kb -> 174.79kb (4.2%)
+    /lib/lightbox/images/next.png -- 1.32kb -> 1.27kb (3.85%)
+    /IMAGE.yosr.modif/HomePage0.2.jpg -- 642.95kb -> 620.21kb (3.54%)
+    /img/HomePage0.2.jpg -- 642.95kb -> 620.21kb (3.54%)
+    /img/Aboutu0.1s.jpg -- 12.99kb -> 12.74kb (1.96%)
+    /IMAGE.yosr.modif/Education.3.1.jpg -- 392.21kb -> 388.94kb (0.84%)
+    /img/Education.3.1.jpg -- 392.21kb -> 388.94kb (0.84%)
+    /img/team-1.jpg -- 20.16kb -> 20.04kb (0.58%)
+    /img/Education.2.0.jpg -- 387.97kb -> 386.14kb (0.47%)
+    /IMAGE.yosr.modif/Education.2.0.jpg -- 387.97kb -> 386.14kb (0.47%)
+    /img/Agriculture0.1.jpg -- 216.47kb -> 215.93kb (0.25%)
+    /IMAGE.yosr.modif/Agriculture0.1.jpg -- 216.47kb -> 215.93kb (0.25%)
+    /img/Keejob Image.jpg -- 97.73kb -> 97.55kb (0.18%)
+    /IMAGE.yosr.modif/Education.2.2.jpg -- 291.94kb -> 291.46kb (0.16%)
+    /IMAGE.yosr.modif/Education.3.0.jpg -- 254.95kb -> 254.55kb (0.15%)
+    /IMAGE.yosr.modif/Education.1.0.jpg -- 208.16kb -> 207.97kb (0.09%)
+    /img/Education.1.0.jpg -- 208.16kb -> 207.97kb (0.09%)
+    /img/AboutUs0.3.jpg -- 26.96kb -> 26.96kb (0.01%)
+    /img/AboutUs0.2.jpg -- 43.43kb -> 43.43kb (0.01%)
+    /IMAGE.yosr.modif/AboutUs0.0.1.jpg -- 60.98kb -> 60.97kb (0.01%)
+    
+    Signed-off-by: ImgBotApp <ImgBotHelp@gmail.com>
+
+[33mcommit 66aa6f2742747f21553bbb8af6af82d3aeb8e415[m
+Author: YOSROMRI <yosr.omri@esprit.tn>
+Date:   Wed Jan 8 22:11:08 2025 +0100
+
+    projectdone
+
+[33mcommit a6c168d5d7f4fa4c42ecee216d1c536a8d1e95ed[m
+Merge: d448f68 1ba7efa
+Author: YOSROMRI <yosr.omri@esprit.tn>
+Date:   Tue Jan 7 22:17:56 2025 +0100
+
+    Merge branch 'master' of https://github.com/hamhoum10/GAVAN
+
+[33mcommit d448f685f00b487eaa943a6a964ed4e1b6aa8b9c[m
+Author: YOSROMRI <yosr.omri@esprit.tn>
+Date:   Tue Jan 7 22:17:28 2025 +0100
+
+    project
+
+[33mcommit 1ba7efa066988135a7d7d540a954986e88382469[m
+Author: hamhoum10 <omriyasser12@gmail.com>
+Date:   Tue Jan 7 22:11:52 2025 +0100
+
+    .
+
+[33mcommit 69a80e5fafa4409bf0e9f02b48f28b14dedcf368[m
+Author: hamhoum10 <omriyasser12@gmail.com>
+Date:   Tue Jan 7 21:57:56 2025 +0100
+
+    yasser
+
+[33mcommit 53418e074e80abde3177e93a1ef5f3b5a2764a1d[m
+Author: YOSROMRI <yosr.omri@esprit.tn>
+Date:   Tue Jan 7 19:25:02 2025 +0100
+
+    AboutUs&Services
+
+[33mcommit 3153b2eb5e20973a2cfa9e8fe97593203895dab7[m
+Author: YOSROMRI <yosr.omri@esprit.tn>
+Date:   Tue Jan 7 16:28:20 2025 +0100
+
+    Background
+
+[33mcommit 061089fe87cf95c46bcce2451fca83186e524e6c[m
+Author: YOSROMRI <yosr.omri@esprit.tn>
+Date:   Tue Jan 7 13:07:15 2025 +0100
+
+    test.service
+
+[33mcommit 4f6cb335475a06948fdafa0f38f1a1401ff843c9[m
+Author: YOSROMRI <yosr.omri@esprit.tn>
+Date:   Tue Jan 7 12:29:02 2025 +0100
+
+    yosr
+
+[33mcommit 44d55a9bb923937643e051a1acd867ede64289ef[m
+Author: hamhoum10 <omriyasser12@gmail.com>
+Date:   Thu Jan 2 14:25:12 2025 +0100
+
+    first iteration

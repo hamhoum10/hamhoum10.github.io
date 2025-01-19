@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GAVAN - Association Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/GAVAN_logo-removebg-preview.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/GAVAN logo.png" alt="" style="height: 60px; width: auto; margin-right: 10px;">
+            <h2 class="m-0 text-primary">GAVAN</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="service.html" class="nav-item nav-link active">Project</a>
+             
+               
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+           
+    </nav>
+    <!-- Navbar End -->
+   
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5" style="background-image: linear-gradient(rgba(53, 53, 53, .7), rgba(53, 53, 53, .7)), url('IMAGE.yosr.modif/ourproject0.5.jpg'); background-size: cover; background-position: center;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Project</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Project</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <style>
+  
+   
+  
+        .hover-card {
+          width: 300px;
+          height: 500px;
+          perspective: 1000px;
+        }
+        
+        .hover-card .front,
+        .hover-card .back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align content to the left */
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Add some padding for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+        
+        .hover-card .front {
+          background: url('background.jpg') center/cover no-repeat;
+        
+        }
+        
+        .hover-card .front h3 {
+          margin-top: 10px;
+          font-size: 18px;
+        }
+        
+        .hover-card .back {
+          background-color: #fcbf49;
+          color: #333;
+          transform: rotateY(180deg);
+        }
+        
+        .hover-card .back h3 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        
+        .hover-card .details {
+          margin: 10px 0;
+        }
+        
+        .hover-card .details p {
+          margin: 5px 0;
+        }
+        
+       
+        
+       
+        
+        .hover-card:hover .front {
+          transform: rotateY(180deg);
+        }
+        
+        .hover-card:hover .back {
+          transform: rotateY(360deg);
+        }
+        
+          </style>
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-5">Our Projects</h1>
+            </div>
+     
+            <div class="row">
+                <!-- First Row: 3 Cards -->
+                <div class="col-md-4">
+                  <div class="hover-card">
+                    <div class="front" style="background-image: url(IMAGE.yosr.modif/Education.1.0.jpg)">
+                    </div>
+                    <div class="back">
+                        
+                            <li><strong>Service:</strong> Education</li>
+                            <li><strong>Concept:</strong> Promoting empowerment through physical fitness and discipline.</li>
+                            <li><strong>Description:</strong>
+                                <ul>
+                                    <li>Fostered physical fitness, discipline, and self-confidence.</li>
+                                    <li>Organized engaging training sessions focused on personal growth.</li>
+                                    <li>Encouraged participants to embrace values such as respect, perseverance, and teamwork.</li>
+                                    <li>Empowered individuals to overcome challenges and build a strong foundation for success.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>   
+                  </div>
+                </div>
+                
+                <div class="col-md-4">
+                  <div class="hover-card">
+                    <div class="front" style="background-image: url(IMAGE.yosr.modif/Education.3.1.jpg)">
+                    </div>
+                    <div class="back">
+                    
+                        <li><strong>Service:</strong> Education</li>
+                            <li><strong>Concept:</strong> Introducing yoga to children as a fun and engaging tool.</li>
+                            <li><strong>Description:</strong>
+                                <ul>
+                                    <li>Providing age-appropriate yoga sessions designed to improve flexibility, strength, and coordination.</li>
+                                    <li>Encouraging children to develop self-awareness and emotional resilience through breathing exercises and mindfulness techniques.</li>
+                                    <li>Creating a playful and supportive environment where children can learn the values of focus, patience, and relaxation.</li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-md-4">
+                  <div class="hover-card">
+                    <div class="front" style="background-image: url(IMAGE.yosr.modif/Education.2.0.jpg)">
+                    </div>
+                    <div class="back">
+                        <li><strong>Service:</strong> Business</li>
+                            <li><strong>Concept:</strong> Empowering individuals to develop practical carpentry skills.</li>
+                            <li><strong>Description:</strong>
+                                <ul>
+                                    <li>Offering hands-on workshops that teach the basics of carpentry, including safe tool usage and simple project crafting.</li>
+                                    <li>Encouraging participants to explore their creativity and craftsmanship through guided activities.</li>
+                                    <li>Promoting a sense of accomplishment and connection with the community by working on meaningful projects together.</li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>   
+                  </div>
+                </div>
+              </div>
+              
+              <br><br>
+              
+              <div class="row">
+                <!-- Second Row: 3 Cards -->
+                <div class="col-md-4">
+                  <div class="hover-card">
+                    <div class="front" style="background-image: url(IMAGE.yosr.modif/Agriculture0.1.jpg)">
+                    </div>
+                    <div class="back">
+                        <li><strong>Service:</strong> Agriculture</li>
+                            <li><strong>Concept:</strong> Preserving sustainable farming practices.</li>
+                            <li><strong>Description:</strong>
+                                <ul>
+                                    <li>Teaching organic farming techniques passed down through generations.</li>
+                                    <li>Encouraging a deeper connection with the land and respect for nature.</li>
+                                    <li>Enhancing food security, supporting biodiversity, and promoting sustainable livelihoods.</li>
+                                    <li>Fostering a resilient and self-sufficient agricultural community.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>  
+                  </div>
+                </div>
+              
+                <div class="col-md-4">
+                  <div class="hover-card">
+                    <div class="front" style="background-image: url(IMAGE.yosr.modif/Agriculture0.2.jpg)">
+                    </div>
+                    <div class="back">
+                        <li><strong>Service:</strong> Agriculture</li>
+                            <li><strong>Concept:</strong> Integrating technology with traditional farming to enhance productivity.</li>
+                            <li><strong>Description:</strong>
+                                <ul>
+                                    <li>Introducing innovative tools and systems for improved crop management.</li>
+                                    <li>Optimizing resource use and reducing environmental impact.</li>
+                                    <li>Empowering farmers with data-driven decision-making for more efficient practices.</li>
+                                    <li>Contributing to sustainable and future-oriented agricultural methods.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-md-4">
+                    <div class="hover-card">
+                      <div class="front" style="background-image: url(IMAGE.yosr.modif/Project.business.jpg)">
+                      </div>
+                      <div class="back">
+                          <li><strong>Service:</strong> Business</li>
+                              <li><strong>Concept:</strong> Creating a dynamic space for community engagement.</li>
+                              <li><strong>Description:</strong>
+                                  <ul>
+                                      <li>Building a multi-functional space designed to host various activities, from fitness classes to workshops and community events.</li>
+                                      <li>Providing state-of-the-art facilities for both physical and creative pursuits.</li>
+                                      <li>Offering a welcoming environment where people can connect, learn, and grow together.</li>
+                                      
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <br><br>
+              
+              <div class="row">
+                <!-- Second Row: 3 Cards -->
+                <div class="col-md-4">
+                  <div class="hover-card">
+                    <div class="front" style="background-image: url(IMAGE.yosr.modif/Adult\ Yoga.jpg)">
+                    </div>
+                    <div class="back">
+                        <li><strong>Service:</strong> Education</li>
+                            <li><strong>Concept:</strong> Promoting physical well-being and mental clarity.</li>
+                            <li><strong>Description:</strong>
+                                <ul>
+                                    <li>Offering tailored yoga sessions that cater to adults of all skill levels.</li>
+                                    <li>Focusing on physical strength, flexibility, balance, and mental relaxation.</li>
+                                    <li>Creating a peaceful and supportive environment to relieve stress, improve posture, and increase mindfulness.</li>
+                                    <li>Encouraging holistic wellness through mindful breathing, meditation, and restorative poses for both body and mind.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>  
+                  </div>
+                </div>
+
+                
+            </div>
+    <!-- Projects End -->       
+
+     <br><br><br>
+
+    <!-- Add pagination style -->
+<style>
+    .service-item img {
+        width: 100%;
+        height: 250px; /* Adjust the height as needed */
+        object-fit: cover; /* Ensures the image scales and crops proportionally */
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .pagination li {
+        margin: 0 5px;
+    }
+
+    .pagination a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #007bff;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+    }
+
+    .pagination a.active {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .pagination a:hover {
+        background-color: #0056b3;
+        color: white;
+    }
+</style>
+
+<!-- Gallery Section -->
+<div class="section-title text-center">
+    <h1 class="display-5 mb-5">Our Gallery</h1>
+</div>
+
+<div class="container">
+    <div id="gallery-page-1" class="gallery-page">
+        <div class="row g-4">
+            <!-- Page 1 Images -->
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/bisiness0.0.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/bisiness0.0.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.1.1.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.1.1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.1.2.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.1.2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Exch3.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Exch3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Exch4.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Exch4.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Exch2.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Exch2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Agriculture1.1.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Agriculture1.1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Agriculture1.2.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Agriculture1.2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Agriculture1.3.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Agriculture1.3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add other images for page 1 here -->
+        </div>
+    </div>
+
+    <div id="gallery-page-2" class="gallery-page" style="display: none;">
+        <div class="row g-4">
+            <!-- Page 2 Images -->
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/discover0.1.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/discover0.1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/discover0.2.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/discover0.2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/discover0.3.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/discover0.3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/discover0.4.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/discover0.4.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/discover0.5.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/discover0.5.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/discover0.6.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/discover0.6.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/discover0.7.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/discover0.7.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/discover1.1.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/discover1.1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/discover1.2.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/discover1.2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add other images for page 2 here -->
+        </div>
+    </div>
+
+    <div id="gallery-page-3" class="gallery-page" style="display: none;">
+        <div class="row g-4">
+            <!-- Page 3 Images -->
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/bisiness0.3.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/bisiness0.3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/bisiness0.4.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/bisiness0.4.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/bisiness0.5.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/bisiness0.5.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/bisiness0.6.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/bisiness0.6.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/bisiness0.1.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/bisiness0.1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.2.0.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.2.0.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.2.1.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.2.1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.2.2.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.2.2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/bisiness0.2.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/bisiness0.2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add other images for page 3 here -->
+        </div>
+    </div>
+
+    <div id="gallery-page-4" class="gallery-page" style="display: none;">
+        <div class="row g-4">
+            <!-- Page 4 Images -->
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.4.3.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.4.3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.3.0.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.3.0.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.4.5.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.4.5.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.3.1.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.3.1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.4.7.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.4.7.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Adult Yoga.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Adult Yoga.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <a href="IMAGE.yosr.modif/Education.3.2.jpg" data-lightbox="portfolio">
+                            <img class="img-fluid" src="IMAGE.yosr.modif/Education.3.2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add other images for page 4 here -->
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <ul class="pagination">
+        <li><a href="#" class="active" onclick="showPage(1, event)">1</a></li>
+        <li><a href="#" onclick="showPage(2, event)">2</a></li>
+        <li><a href="#" onclick="showPage(3, event)">3</a></li>
+        <li><a href="#" onclick="showPage(4, event)">4</a></li>
+
+        <!-- Add more pages as needed -->
+    </ul>
+</div>
+
+<!-- Add JavaScript -->
+<script>
+    function showPage(pageNumber, event) {
+        // Prevent the default behavior of the link (refreshing the page)
+        event.preventDefault();
+
+        // Save the current scroll position
+        const currentScrollPos = window.scrollY;
+
+        // Hide all gallery pages
+        const pages = document.querySelectorAll('.gallery-page');
+        pages.forEach(page => page.style.display = 'none');
+
+        // Show the selected page
+        document.getElementById(`gallery-page-${pageNumber}`).style.display = 'block';
+
+        // Update active pagination link
+        const paginationLinks = document.querySelectorAll('.pagination a');
+        paginationLinks.forEach(link => link.classList.remove('active'));
+        paginationLinks[pageNumber - 1].classList.add('active');
+
+        // Restore the scroll position
+        window.scrollTo(0, currentScrollPos);
+    }
+</script>
+
+
+
+    
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Nairobi, Kenya</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254 722 667420</p>
+                    
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa fa-envelope"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="service.html">Our Projects</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="contact_member.html">Volunteer</a>
+                    <a class="btn btn-link" href="contact_company.html">Donate</a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
