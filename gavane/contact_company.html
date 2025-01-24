@@ -30,6 +30,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- EmailJS -->
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script>
+       (function () {
+           emailjs.init("gknukQVN74Bys6weS"); // Replace with your public key
+       })();
+   </script>
 </head>
 
 <body>
@@ -72,7 +79,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Donate</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Collaborate</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
@@ -92,68 +99,94 @@
                 <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Colaborate with Us</h1>
+                            <h1 class="display-5 mb-4">Collaborate with Us</h1>
                         </div>
-                        
-                        <form>
+                        <form id="contact-form-3">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control" id="name3" placeholder="Your Name">
+                                        <label for="name3">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="email" class="form-control" id="email3" placeholder="Your Email">
+                                        <label for="email3">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="assosiation" placeholder="Your Name">
-                                        <label for="assosiation">Assosiation Name</label>
+                                        <input type="text" class="form-control" id="association" placeholder="Association Name">
+                                        <label for="association">Association Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="url" class="form-control" id="web" placeholder="Your Email">
-                                        <label for="web">Web Site</label>
+                                        <input type="url" class="form-control" id="web" placeholder="Association URL">
+                                        <label for="web">Association URL</label>
                                     </div>
                                 </div>
-                                <br>
-                                
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">HOW ?</label>
+                                        <textarea class="form-control" id="message3" placeholder="Leave a message here" style="height: 100px"></textarea>
+                                        <label for="message3">How we can Collaborate ?</label>
                                     </div>
                                 </div>
-                                <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-        function onSubmit(token) {
-          document.getElementById("demo-form").submit();
-        }
-      </script>
-        <button class="g-recaptcha btn btn-primary w-100 py-3" 
-        data-sitekey="6Lfwj7oqAAAAALJYnWhOp7Hdh3DvhvXCodNDYgIJ" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
-                                
+                                <div class="col-12">
+                                    <button class="g-recaptcha btn btn-primary w-100 py-3" 
+                                    data-sitekey="6Lfwj7oqAAAAALJYnWhOp7Hdh3DvhvXCodNDYgIJ" 
+                                    data-callback='onSubmit' 
+                                    data-action='submit'>Submit</button>
+                                </div>
                             </div>
-                            
-                        </form>
+<script>
+            document.getElementById("contact-form-3").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Capture values from the new form
+    const name = document.getElementById("name3").value;
+    const email = document.getElementById("email3").value;
+    const web = document.getElementById("web").value;
+    const association_name = document.getElementById("association").value;
+    const message = document.getElementById("message3").value;
+
+    if (!name || !email || !message) {
+        alert("Please fill out all fields");
+        return;
+    }
+
+    // Send the new template
+    emailjs.send("service_41tvxik", "template_fxpwu0m", {
+        from_name: name,
+        from_email: email,
+        from_web: web,
+        from_association_name: association_name,
+        message: message
+    })
+    .then(function (response) {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form-3").reset();
+        grecaptcha.reset(); // Reset reCAPTCHA
+    },function (error) {
+        alert("Failed to send message. Please try again.");
+        console.error("EmailJS error:", error);
+    });
+});
+</script>              
+                                
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img src="IMAGE.yosr.modif/Contactus.png">
+                    <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img src="IMAGE.yosr.modif/Contactus.png">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Contact End -->
+        <!-- Contact End -->
 
 
     <!-- Footer Start -->
@@ -166,13 +199,13 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254 722 667420</p>
                     
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa fa-envelope"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="mailto:growafricavolunteersallience@gmail.com" title="Send an email"><i class="fab fa fa-envelope"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/grow-africa-volunteer-alliance-network/" target="_blank" title="Visit Our LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-               
+                
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
                     <a class="btn btn-link" href="index.html">Home</a>
@@ -180,14 +213,14 @@
                     <a class="btn btn-link" href="service.html">Our Projects</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="contact_member.html">Volunteer</a>
-                    <a class="btn btn-link" href="contact_company.html">Donate</a>
+                    <a class="btn btn-link" href="contact_company.html">Collaborate</a>
                 </div>
                 
             </div>
         </div>
         <div class="container">
             <div class="copyright">
-               
+                
             </div>
         </div>
     </div>

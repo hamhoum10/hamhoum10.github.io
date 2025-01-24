@@ -131,10 +131,12 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="g-recaptcha btn btn-primary w-100 py-3" 
-        data-sitekey="6Lfwj7oqAAAAALJYnWhOp7Hdh3DvhvXCodNDYgIJ" 
+                                    <button class="g-recaptcha btn btn-primary w-100 py-3" data-sitekey="6Lfwj7oqAAAAALJYnWhOp7Hdh3DvhvXCodNDYgIJ" 
         data-callback='onSubmit' 
         data-action='submit'>Submit</button>
+    </div>
+</div>
+        
         <script>
             document.getElementById("contact-form").addEventListener("submit", function (e) {
                 e.preventDefault();
@@ -149,11 +151,20 @@
                 const email = document.getElementById("email").value;
                 const subject = document.getElementById("subject").value;
                 const message = document.getElementById("message").value;
+
+                if (!name || !email || !message || !subject) {
+        alert("Please fill out all fields ");
+        return;
+    }
+                
+                
+
+                
     
                 emailjs.send("service_41tvxik", "template_fxpwu0m", {
-                    name: name,
-                    email: email,
-                    subject: subject,
+                    from_name: name,
+                    from_email: email,
+                    from_subject: subject,
                     message: message
                 })
                     .then(function (response) {
@@ -165,10 +176,8 @@
                         console.error("EmailJS error:", error);
                     });
             });
-        </script>
-                                    
-                                </div>
-                            </div>
+        </script>              
+                                
                         </form>
                     </div>
                 </div>
@@ -193,10 +202,10 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254 722 667420</p>
                     
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa fa-envelope"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="mailto:growafricavolunteersallience@gmail.com" title="Send an email"><i class="fab fa fa-envelope"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/grow-africa-volunteer-alliance-network/" target="_blank" title="Visit Our LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
@@ -207,7 +216,7 @@
                     <a class="btn btn-link" href="service.html">Our Projects</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="contact_member.html">Volunteer</a>
-                    <a class="btn btn-link" href="contact_company.html">Donate</a>
+                    <a class="btn btn-link" href="contact_company.html">Collaborate</a>
                 </div>
                 
             </div>

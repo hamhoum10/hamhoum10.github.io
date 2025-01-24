@@ -30,6 +30,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- EmailJS -->
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script>
+       (function () {
+           emailjs.init("gknukQVN74Bys6weS"); // Replace with your public key
+       })();
+   </script>
 </head>
 
 <body>
@@ -94,74 +101,129 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">Join Us</h1>
                         </div>
-                        
-                        <form>
+                        <form id="contact-form-2">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control" id="name2" placeholder="Your Name">
+                                        <label for="name2">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="email" class="form-control" id="email2" placeholder="Your Email">
+                                        <label for="email2">Your Email</label>
                                     </div>
                                 </div>
-                                <br>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="date" class="form-control" id="start_date" placeholder="Your Name">
-                                        <label for="start_date">start date</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="date" class="form-control" id="end_date" placeholder="Your Email">
-                                        <label for="end_date">end date</label>
-                                    </div>
-                                </div>
-                             
                                 <div class="col-12">
                                     <div class="form-floating">
-                                       <h2>cv</h2>
-                                        <input type="file" accept="application/pdf" id="cv">
+                                        <input type="date" class="form-control" id="start-date" placeholder="start-date">
                                         
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Why you want to volunteer?<label>
+                                        <input type="date" class="form-control" id="end-date" placeholder="end-date">
+                                        
                                     </div>
                                 </div>
-                                <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-        function onSubmit(token) {
-          document.getElementById("demo-form").submit();
-        }
-      </script>
-        <button class="g-recaptcha btn btn-primary w-100 py-3" 
-        data-sitekey="6Lfwj7oqAAAAALJYnWhOp7Hdh3DvhvXCodNDYgIJ" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
-                                
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        
+                                       <h2>Upload Your CV</h2>
+                                       <input type="file" accept="application/pdf" id="cv">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message2" placeholder="Leave a message here" style="height: 100px"></textarea>
+                                        <label for="message2">Why You want to volunteer ?</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="g-recaptcha btn btn-primary w-100 py-3" 
+                                    data-sitekey="6Lfwj7oqAAAAALJYnWhOp7Hdh3DvhvXCodNDYgIJ" 
+                                    data-callback='onSubmit' 
+                                    data-action='submit'>Submit</button>
+                                </div>
                             </div>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", () => {
+                                    const startDateInput = document.getElementById("start-date");
+                                    const endDateInput = document.getElementById("end-date");
                             
+                                    // Set the minimum date for the start date to today
+                                    const today = new Date().toISOString().split("T")[0];
+                                    startDateInput.setAttribute("min", today);
+                            
+                                    // Update the minimum date for the end date based on the selected start date
+                                    startDateInput.addEventListener("change", () => {
+                                        const startDate = startDateInput.value;
+                                        endDateInput.setAttribute("min", startDate);
+                                    });
+                            
+                                    // Validate the end date
+                                    endDateInput.addEventListener("change", () => {
+                                        const startDate = new Date(startDateInput.value);
+                                        const endDate = new Date(endDateInput.value);
+                            
+                                        if (endDate <= startDate) {
+                                            alert("End Date must be after Start Date.");
+                                            endDateInput.value = ""; // Clear the invalid value
+                                        }
+                                    });
+                                });
+                            
+                                document.getElementById("contact-form-2").addEventListener("submit", function (e) {
+                                    e.preventDefault();
+                            
+                                    const name = document.getElementById("name2").value;
+                                    const email = document.getElementById("email2").value;
+                                    const startDate = document.getElementById("start-date").value;
+                                    const endDate = document.getElementById("end-date").value;
+                                    const message = document.getElementById("message2").value;
+                                    const cvFile = document.getElementById("cv").files[0]; // Access the uploaded file
+                            
+                                    // Ensure all fields are filled and CV is uploaded
+                                    if (!name || !email || !startDate || !endDate || !cvFile) {
+                                        alert("Please fill out all fields and upload your CV!");
+                                        return;
+                                    }
+                            
+                                    // Use EmailJS to send the form data
+                                    emailjs.send("service_41tvxik", "template_zx5m75p", {
+                                        from_name: name,
+                                        from_email: email,
+                                        from_start_date: startDate,
+                                        from_end_date: endDate,
+                                        from_cv: cvFile.name, // Send only the file name
+                                        message: message
+                                    })
+                                    .then(function (response) {
+                                        alert("Message sent successfully!");
+                                        document.getElementById("contact-form-2").reset();
+                                        grecaptcha.reset(); // Reset reCAPTCHA
+                                    }, function (error) {
+                                        alert("Failed to send message. Please try again.");
+                                        console.error("EmailJS error:", error);
+                                    });
+                                });
+                            </script>
+                                         
+                                
                         </form>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img src="IMAGE.yosr.modif/Contactus.png">
-            
+                    <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img src="IMAGE.yosr.modif/Contactus.png">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Contact End -->
+        <!-- Contact End -->
 
 
     <!-- Footer Start -->
@@ -174,10 +236,10 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254 722 667420</p>
                     
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa fa-envelope"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="mailto:growafricavolunteersallience@gmail.com" title="Send an email"><i class="fab fa fa-envelope"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/grow-africa-volunteer-alliance-network/" target="_blank" title="Visit Our LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
@@ -188,7 +250,7 @@
                     <a class="btn btn-link" href="service.html">Our Projects</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="contact_member.html">Volunteer</a>
-                    <a class="btn btn-link" href="contact_company.html">Donate</a>
+                    <a class="btn btn-link" href="contact_company.html">Collaborate</a>
                 </div>
                 
             </div>

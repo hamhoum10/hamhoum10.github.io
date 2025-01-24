@@ -27,24 +27,41 @@
     <!-- Contact Form -->
     <div class="container contact">
         <h1 class="mb-4">Contact Us</h1>
-        <form id="contact-form">
+        <form id="contact-form-4">
             <div class="row g-3">
                 <div class="col-md-6">
-                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    <input type="text" class="form-control" id="name4" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6">
-                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    <input type="email" class="form-control" id="email4" placeholder="Your Email" required>
                 </div>
                 <div class="col-12">
-                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                    <input type="text" class="form-control" id="subject4" placeholder="Subject" required>
                 </div>
                 <div class="col-12">
-                    <textarea class="form-control" id="message" placeholder="Message" rows="4" required></textarea>
+                    <textarea class="form-control" id="message4" placeholder="Message" rows="4" required></textarea>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input type="date" class="form-control" id="start-date4" placeholder="Start Date" required>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input type="date" class="form-control" id="end-date4" placeholder="End Date" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        
+                       <h2>Upload Your CV</h2>
+                       <input type="file" accept=".pdf" id="cv4">
+                        
+                    </div>
                 </div>
                 <div class="col-12">
                     <!-- reCAPTCHA -->
-                    <div class="g-recaptcha" data-sitekey="6Lfwj7oqAAAAALJYnWhOp7Hdh3DvhvXCodNDYgIJ
-                    "></div>
+                    <div class="g-recaptcha" data-sitekey="6Lfwj7oqAAAAALJYnWhOp7Hdh3DvhvXCodNDYgIJ"></div>
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary w-100">Send</button>
@@ -55,35 +72,77 @@
 
     <!-- JavaScript -->
     <script>
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault();
+        document.addEventListener("DOMContentLoaded", () => {
+            const startDateInput = document.getElementById("start-date4");
+            const endDateInput = document.getElementById("end-date4");
 
-            // const recaptchaResponse = document.querySelector(".g-recaptcha-response").value;
-            // if (!recaptchaResponse) {
-            //     alert("Please complete the reCAPTCHA.");
-            //     return;
-            // }
+            // Set the minimum date for the start date to today
+            const today = new Date().toISOString().split("T")[0];
+            startDateInput.setAttribute("min", today);
 
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const subject = document.getElementById("subject").value;
-            const message = document.getElementById("message").value;
+            // Update the minimum date for the end date based on the selected start date
+            startDateInput.addEventListener("change", () => {
+                const startDate = startDateInput.value;
+                endDateInput.setAttribute("min", startDate);
+            });
 
-            emailjs.send("service_41tvxik", "template_fxpwu0m", {
-                name: name,
-                email: email,
-                subject: subject,
-                message: message
-            })
-                .then(function (response) {
-                    alert("Message sent successfully!");
-                    document.getElementById("contact-form").reset();
-                    grecaptcha.reset(); // Reset reCAPTCHA
-                }, function (error) {
-                    alert("Failed to send message. Please try again.");
-                    console.error("EmailJS error:", error);
-                });
+            // Validate the end date
+            endDateInput.addEventListener("change", () => {
+                const startDate = new Date(startDateInput.value);
+                const endDate = new Date(endDateInput.value);
+
+                if (endDate <= startDate) {
+                    alert("End Date must be after Start Date.");
+                    endDateInput.value = ""; // Clear the invalid value
+                }
+            });
         });
+
+        document.getElementById("contact-form-4").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name4").value;
+    const email = document.getElementById("email4").value;
+    const subject = document.getElementById("subject4").value;
+    const message = document.getElementById("message4").value;
+    const startDate = document.getElementById("start-date4").value;
+    const endDate = document.getElementById("end-date4").value;
+    const cvFile = document.getElementById("cv4").files[0];
+
+    // Ensure a file is selected
+    if (cvFile) {
+        const reader = new FileReader();
+        reader.onload = function () {
+            const base64File = reader.result.split(",")[1]; // Remove the Base64 prefix
+
+            // Send email with EmailJS
+            emailjs.send("service_41tvxik", "template_zx5m75p", {
+                from_name: name,
+                from_email: email,
+                from_subject: subject,
+                from_message: message,
+                from_start_date: startDate,
+                from_end_date: endDate,
+                file_name: cvFile.name, // File name
+                file_content: base64File, // File content as Base64
+            })
+            .then(function (response) {
+                alert("Message sent successfully!");
+                document.getElementById("contact-form-4").reset();
+                grecaptcha.reset(); // Reset reCAPTCHA
+            }, function (error) {
+                alert("Failed to send message. Please try again.");
+                console.error("EmailJS error:", error);
+            });
+        };
+        
+        reader.readAsDataURL(cvFile); // Start reading the file as Base64
+    } else {
+        alert("Please upload a CV.");
+    }
+});
+
+
     </script>
 </body>
 
